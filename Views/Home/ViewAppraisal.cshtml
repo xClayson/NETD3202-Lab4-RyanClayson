@@ -1,0 +1,36 @@
+﻿<!--
+  Name: Ryan Clayson
+  Date: 11/20/2020
+    -->
+@{
+    ViewData["Title"] = "Your Appraisal";
+}
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Your Appraisal</title>
+    <link rel="stylesheet" href="~/css/site.css" type="text/css" />
+</head>
+
+<body>
+    
+    <h2 style="text-align: center">Student4CheapTexts<img id="img_logo" alt="Logo" src="~/Images/books.jpg" width="100" height="100" /></h2>
+    <!--Display Tabs Where user can click to and get redirected.-->
+    <ul>
+        <li><a class="active" href="~/Home/Index">Home</a></li>
+        <li><a href="~/Home/Appraise">Appraise Again</a></li>
+
+    </ul>
+    
+    <h2>Your Appraisal</h2>
+    
+    <h3 style="text-align: left">
+        @ViewData["Message"]
+    </h3>
+
+</body>
+
+</html>
