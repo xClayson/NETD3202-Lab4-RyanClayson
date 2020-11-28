@@ -16,7 +16,7 @@ namespace NETD3202_Lab4_RyanClayson.Controllers
 {
     public class HomeController : Controller
     {
-        List<Textbook> booklist = new List<Textbook>();
+        public static List<Textbook> booklist = new List<Textbook>();
 
         public IActionResult Index()
         {
@@ -27,7 +27,7 @@ namespace NETD3202_Lab4_RyanClayson.Controllers
         [HttpGet]
         public IActionResult Appraise()
         {
-            return View();
+            return View();     
         }
 
         [HttpPost]
@@ -40,13 +40,17 @@ namespace NETD3202_Lab4_RyanClayson.Controllers
                 //Sets message to To.String
                 ViewData["Message"] = model.ToString();
                 //Redirects to View Appraisal Page
-                return View("ViewAppraisal", model);
+                return View("YourAppraisal", model);
             }
             //Invalid. User did not enter inout in one or more fields
             else
             {
                 return View("Fail");
             }
+        }
+        public IActionResult ViewAppraisal()
+        {
+            return View(booklist);
         }
     }
 }

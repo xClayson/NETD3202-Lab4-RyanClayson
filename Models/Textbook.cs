@@ -70,7 +70,7 @@ namespace NETD3202_Lab4_RyanClayson.Models
         /// To String Method used to display the user's input when Appraised
         /// </summary>
         /// <returns></returns>
-        public string ToString()
+        public override string ToString()
         {
             return "Your textbook: " + title + ",  Version " + version + ", was appraised at: $" +
                    CalculateAppraisal(price, condition);
